@@ -1,0 +1,36 @@
+import three_d_shapes as t
+
+
+# Cube
+print("Cube CSA:", t.cube_csa(3))
+print("Cube TSA:", t.cube_tsa(3))
+print("Cube Volume:", t.cube_volume(3))
+
+
+# Cuboid
+print("Cuboid CSA:", t.cuboid_csa(2, 3, 4))
+print("Cuboid TSA:", t.cuboid_tsa(2, 3, 4))
+print("Cuboid Volume:", t.cuboid_volume(2, 3, 4))
+
+
+# Cylinder
+print("Cylinder CSA:", t.cylinder_csa(2, 5))
+print("Cylinder TSA:", t.cylinder_tsa(2, 5))
+print("Cylinder Volume:", t.cylinder_volume(2, 5))
+
+
+# Cone
+print("Cone CSA:", t.cone_csa(2, 5))
+print("Cone TSA:", t.cone_tsa(2, 5))
+print("Cone Volume:", t.cone_volume(2, 5))
+
+
+# Sphere
+print("Sphere TSA:", t.sphere_tsa(3))
+print("Sphere Volume:", t.sphere_volume(3))
+
+
+# Hemisphere
+print("Hemisphere CSA:", t.hemisphere_csa(3))
+print("Hemisphere TSA:", t.hemisphere_tsa(3))
+print("Hemisphere Volume:", t.hemisphere_volume(3))

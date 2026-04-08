@@ -1,0 +1,10 @@
+#calculation3.py
+from numeric_calculation import add_numbers
+
+
+m = 10
+n = 20
+
+
+print("Sum of", m, "and", n, "is:", add_numbers(m, n))
+print("Product of", m, "and", n, "is:", calculate_product(m, n))

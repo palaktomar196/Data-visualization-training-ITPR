@@ -1,0 +1,28 @@
+# Program to count vowels in a file
+
+
+# opening the file in read mode
+file = open("firstfile.txt", "r")
+
+
+# reading the content of file
+data = file.read()
+
+
+# initializing vowel count
+vowels = "aeiouAEIOU"
+count = 0
+
+
+# counting vowels
+for ch in data:
+    if ch in vowels:
+        count += 1
+
+
+# printing result
+print("Number of vowels in file:", count)
+
+
+# closing the file
+file.close()

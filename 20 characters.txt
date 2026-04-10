@@ -1,0 +1,30 @@
+# program for reading data from a file
+
+
+# opening file in read mode
+try:
+    filev = open("firstfile.txt", "r")
+
+
+    # reading data from file
+    data = filev.read()
+
+
+    # printing data
+    print("File Data:\n")
+    print(data)
+
+
+    print("---------------------------")
+
+
+    # counting characters
+    print("No. of characters:", len(data))
+
+
+    # closing file
+    filev.close()
+
+
+except:
+    print("Unable to open the file")

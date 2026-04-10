@@ -1,0 +1,36 @@
+# writing data into the file
+
+
+filev = open("firstfile.txt", "w")
+
+
+print("Enter any five sentences:")
+
+
+sentences = []
+
+
+for i in range(5):
+    s = input()
+    sentences.append(s)
+
+
+# writing all sentences at once
+filev.writelines([line + "\n" for line in sentences])
+
+
+print("Data Successfully written")
+
+
+filev.close()
+
+
+
+
+Output:-  Enter any five sentences:
+Hello
+How are you
+I am fine
+Python is easy
+Thank you
+Data Successfully written

@@ -1,0 +1,32 @@
+# program for writing data into the file
+
+
+# opening file for write operation
+filev = open("firstfile.txt", "w")
+
+
+# blank list of sentences
+sentences = []
+
+
+# taking input of 20 sentences
+print("Enter any 20 sentences:")
+
+
+for x in range(20):
+    sentence = input(f"Sentence {x+1}: ")
+    sentences.append(sentence + "\n") # next line ke liye
+
+
+print("------------------------------")
+
+
+# writing data into the file
+filev.writelines(sentences)
+
+
+print("Data Successfully written")
+
+
+# closing the file
+filev.close()

@@ -1,0 +1,142 @@
+# =====================================
+# 1. Copy File Content
+# =====================================
+1. Start
+2. Open source file in read mode
+3. Read content from source file
+4. Open destination file in write mode
+5. Write content into destination file
+6. Display success message
+7. Stop
+
+
+# =====================================
+# 2. Extract Students with Marks > 75
+# =====================================
+1. Start
+2. Open student file in read mode
+3. Read each record
+4. Split record into name, marks, city
+5. If marks > 75, write record into new file
+6. Repeat until all records processed
+7. Display success message
+8. Stop
+
+
+# =====================================
+# 3. Word Frequency Counter
+# =====================================
+1. Start
+2. Open text file in read mode
+3. Read all text and convert to lowercase
+4. Remove punctuation marks
+5. Split text into words
+6. Count frequency of each word
+7. Display each word with frequency
+8. Stop
+
+
+# =====================================
+# 4. Remove Duplicate Lines
+# =====================================
+1. Start
+2. Open file in read mode
+3. Read all lines
+4. Store unique lines only
+5. Write unique lines into new file
+6. Display success message
+7. Stop
+
+
+# =====================================
+# 5. Email Extractor
+# =====================================
+1. Start
+2. Open text file in read mode
+3. Read file content
+4. Find email addresses using pattern matching
+5. Save extracted emails into new file
+6. Display success message
+7. Stop
+
+
+# =====================================
+# 6. File Merge with Line Numbers
+# =====================================
+1. Start
+2. Open first and second files
+3. Read all lines from both files
+4. Merge lines
+5. Add line numbers
+6. Save into new file
+7. Display success message
+8. Stop
+
+
+# =====================================
+# 7. Reverse File Content
+# =====================================
+1. Start
+2. Open file in read mode
+3. Read all lines
+4. Reverse line order
+5. Write reversed lines into new file
+6. Display success message
+7. Stop
+
+
+# =====================================
+# 8. Keyword Search Tool
+# =====================================
+1. Start
+2. Input keyword from user
+3. Open file in read mode
+4. Check each line for keyword
+5. If found, display line
+6. Repeat until end of file
+7. Stop
+
+
+# =====================================
+# 9. Find Longest Line
+# =====================================
+1. Start
+2. Open file in read mode
+3. Read all lines
+4. Find longest line
+5. Display longest line and its length
+6. Stop
+
+
+# =====================================
+# 10. Compare Two Files
+# =====================================
+1. Start
+2. Open first file and read content
+3. Open second file and read content
+4. Compare both contents
+5. Display whether files are same or different
+6. Stop
+
+
+# =====================================
+# 11. File Encryption (Basic)
+# =====================================
+1. Start
+2. Open input file in read mode
+3. Read file content
+4. Encrypt each character using Caesar cipher
+5. Save encrypted content into new file
+6. Display success message
+7. Stop
+
+
+# =====================================
+# 12. Tail Implementation
+# =====================================
+1. Start
+2. Open file in read mode
+3. Read all lines
+4. Input number N
+5. Display last N lines
+6. Stop

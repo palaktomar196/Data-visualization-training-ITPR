@@ -1,0 +1,10 @@
+def find_longest_line():
+    with open("file.txt", "r") as file:
+        lines = file.readlines()
+
+    longest = max(lines, key=len)
+
+    print("Longest line:", longest.strip())
+    print("Length:", len(longest))
+
+find_longest_line()

@@ -1,0 +1,9 @@
+def keyword_search():
+    keyword = input("Enter keyword: ")
+
+    with open("file.txt", "r") as file:
+        for line in file:
+            if keyword in line:
+                print(line.strip())
+
+keyword_search()

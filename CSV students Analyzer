@@ -1,0 +1,16 @@
+import csv
+
+def csv_student_analyzer():
+    with open("students.csv", "r") as file:
+        reader = csv.reader(file)
+        total = 0
+        count = 0
+
+        for row in reader:
+            total += int(row[1])
+            count += 1
+
+    average = total / count
+    print("Average Marks:", average)
+
+csv_student_analyzer()

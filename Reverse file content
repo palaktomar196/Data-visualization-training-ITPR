@@ -1,0 +1,13 @@
+def reverse_file():
+    with open("file.txt", "r") as file:
+        lines = file.readlines()
+
+    lines.reverse()
+
+    with open("reverse.txt", "w") as file:
+        for line in lines:
+            file.write(line)
+
+    print("File reversed successfully")
+
+reverse_file()

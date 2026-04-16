@@ -1,0 +1,30 @@
+# =====================================
+# 11. File Encryption (Basic)
+# =====================================
+
+def encrypt(text, shift):
+    result = ""
+
+    for char in text:
+        if char.isalpha():
+            if char.islower():
+                result += chr((ord(char) - 97 + shift) % 26 + 97)
+            else:
+                result += chr((ord(char) - 65 + shift) % 26 + 65)
+        else:
+            result += char
+
+    return result
+
+
+file = open("input.txt", "r")
+data = file.read()
+file.close()
+
+encrypted_data = encrypt(data, 3)
+
+file = open("encrypted.txt", "w")
+file.write(encrypted_data)
+file.close()
+
+print("File encrypted successfully")

@@ -1,0 +1,290 @@
+# =====================================================
+# FILE HANDLING LAB PROGRAMS WITH ALGORITHMS
+# =====================================================
+
+
+# =====================================================
+# 1. Copy File Content
+# =====================================================
+Algorithm:
+1. Start
+2. Open source file in read mode
+3. Read file content
+4. Open destination file in write mode
+5. Write content into destination file
+6. Display success message
+7. Stop
+
+Program:
+def copy_file():
+    with open("file1.txt", "r") as f1:
+        data = f1.read()
+    with open("file2.txt", "w") as f2:
+        f2.write(data)
+    print("File copied successfully")
+
+copy_file()
+
+
+# =====================================================
+# 2. Extract Students with Marks > 75
+# =====================================================
+Algorithm:
+1. Start
+2. Open student file
+3. Read each record
+4. Check if marks > 75
+5. Write matching records to new file
+6. Stop
+
+Program:
+def extract_students():
+    with open("student.txt", "r") as f1:
+        lines = f1.readlines()
+
+    with open("newfile.txt", "w") as f2:
+        for line in lines:
+            name, marks, city = line.strip().split(",")
+            if int(marks) > 75:
+                f2.write(line)
+
+extract_students()
+
+
+# =====================================================
+# 3. Word Frequency Counter
+# =====================================================
+Algorithm:
+1. Start
+2. Open text file
+3. Read content
+4. Convert to lowercase
+5. Count frequency of each word
+6. Display result
+7. Stop
+
+Program:
+def word_frequency():
+    with open("article.txt", "r") as file:
+        text = file.read().lower()
+
+    words = text.split()
+    freq = {}
+
+    for word in words:
+        freq[word] = freq.get(word, 0) + 1
+
+    for word, count in freq.items():
+        print(word, count)
+
+word_frequency()
+
+
+# =====================================================
+# 4. Remove Duplicate Lines
+# =====================================================
+Algorithm:
+1. Start
+2. Read all lines
+3. Remove duplicates
+4. Write unique lines to new file
+5. Stop
+
+Program:
+def remove_duplicates():
+    with open("file.txt", "r") as file:
+        lines = file.readlines()
+
+    unique = list(set(lines))
+
+    with open("newfile.txt", "w") as file:
+        file.writelines(unique)
+
+remove_duplicates()
+
+
+# =====================================================
+# 5. Email Extractor
+# =====================================================
+Algorithm:
+1. Start
+2. Read file content
+3. Find email addresses
+4. Save emails in new file
+5. Stop
+
+Program:
+import re
+
+def extract_emails():
+    with open("data.txt", "r") as file:
+        text = file.read()
+
+    emails = re.findall(r'\S+@\S+', text)
+
+    with open("emails.txt", "w") as file:
+        for email in emails:
+            file.write(email + "\n")
+
+extract_emails()
+
+
+# =====================================================
+# 6. File Merge with Line Numbers
+# =====================================================
+Algorithm:
+1. Start
+2. Read both files
+3. Merge lines
+4. Add line numbers
+5. Save merged file
+6. Stop
+
+Program:
+def merge_files():
+    with open("file1.txt", "r") as f1:
+        lines1 = f1.readlines()
+    with open("file2.txt", "r") as f2:
+        lines2 = f2.readlines()
+
+    with open("merged.txt", "w") as f:
+        for i, line in enumerate(lines1 + lines2, start=1):
+            f.write(str(i) + ". " + line)
+
+merge_files()
+
+
+# =====================================================
+# 7. Reverse File Content
+# =====================================================
+Algorithm:
+1. Start
+2. Read file lines
+3. Reverse lines
+4. Save to new file
+5. Stop
+
+Program:
+def reverse_file():
+    with open("file.txt", "r") as file:
+        lines = file.readlines()
+
+    with open("reverse.txt", "w") as file:
+        for line in reversed(lines):
+            file.write(line)
+
+reverse_file()
+
+
+# =====================================================
+# 8. Keyword Search Tool
+# =====================================================
+Algorithm:
+1. Start
+2. Input keyword
+3. Search keyword in file
+4. Display matching lines
+5. Stop
+
+Program:
+def keyword_search():
+    keyword = input("Enter keyword: ")
+
+    with open("file.txt", "r") as file:
+        for line in file:
+            if keyword in line:
+                print(line.strip())
+
+keyword_search()
+
+
+# =====================================================
+# 9. Find Longest Line
+# =====================================================
+Algorithm:
+1. Start
+2. Read lines from file
+3. Find longest line
+4. Display line
+5. Stop
+
+Program:
+def find_longest_line():
+    with open("file.txt", "r") as file:
+        lines = file.readlines()
+
+    longest = max(lines, key=len)
+    print(longest)
+
+find_longest_line()
+
+
+# =====================================================
+# 10. Compare Two Files
+# =====================================================
+Algorithm:
+1. Start
+2. Read both files
+3. Compare contents
+4. Display result
+5. Stop
+
+Program:
+def compare_files():
+    with open("file1.txt", "r") as f1:
+        data1 = f1.read()
+    with open("file2.txt", "r") as f2:
+        data2 = f2.read()
+
+    if data1 == data2:
+        print("Files are identical")
+    else:
+        print("Files are different")
+
+compare_files()
+
+
+# =====================================================
+# 11. File Encryption (Basic)
+# =====================================================
+Algorithm:
+1. Start
+2. Read file content
+3. Encrypt content
+4. Save encrypted file
+5. Stop
+
+Program:
+def encrypt(text, shift):
+    result = ""
+    for char in text:
+        result += chr(ord(char) + shift)
+    return result
+
+with open("input.txt", "r") as file:
+    data = file.read()
+
+with open("encrypted.txt", "w") as file:
+    file.write(encrypt(data, 3))
+
+
+# =====================================================
+# 12. Tail Implementation
+# =====================================================
+Algorithm:
+1. Start
+2. Read file lines
+3. Input N
+4. Display last N lines
+5. Stop
+
+Program:
+def tail(filename, n):
+    with open(filename, "r") as file:
+        lines = file.readlines()
+
+    for line in lines[-n:]:
+        print(line, end="")
+
+n = int(input("Enter N: "))
+tail("input.txt", n)
